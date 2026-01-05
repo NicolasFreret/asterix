@@ -1,0 +1,34 @@
+@use 'sass:map' as *;
+
+$mq:(
+    'md':1350px,
+    'sm':1050px,
+    'xs':750px,
+    "xxs":550px
+);
+
+@function getContainerWitdh($breakpoint){
+    $value: get($mq, $breakpoint);
+    @if($value){
+        @return $value - 50px;
+    }
+}
+
+@mixin query($breakpoint){
+    $value: get($mq, $breakpoint);
+    @if($value){
+        @media screen and (max-width: $value) {
+            @content;
+        }
+    }@else{
+        @warn '#{$breakpoint} nexiste pas';
+    }
+}
+
+@mixin col-gen($size:'-'){
+    @for $i from 1 to 13{
+        .col#{$size}#{$i}{
+            grid-column: span $i;
+        }
+    }
+}

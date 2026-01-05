@@ -1,0 +1,48 @@
+@use './fonts';
+
+header{
+
+    a{
+        @extend %fontUderzo;
+        color:var(--white);
+        font-size: 1.4rem;
+        line-height: normal;
+        font-weight: 400;
+        display: inline-block;
+        padding-inline: 3rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .logo{
+        width: 300px;
+    }
+
+    .logo_search{
+        padding: 3rem 13rem;
+    }
+
+    nav{
+        background-color: var(--red);
+        padding-block: 1rem;
+
+        
+
+        .container{
+            & a:not(:last-child){
+                border-right: var(--white) 1px solid;
+            }
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:1rem;
+        }
+
+        
+    }
+
+
+
+
+}

@@ -1,0 +1,75 @@
+@use './components/grid';
+@use './components/mixins' as *;
+@use './components/fonts';
+@use './components/header';
+
+
+
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --base-px:10px;
+
+    --white:#fff;
+    --black:#000;
+    --red:#D90E23;
+}
+
+
+html{
+    font-size: var(--base-px);
+}
+
+body{
+    font-family:'ProximaNova', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+}
+
+img,
+video{
+    width: 100%;
+    height: 100%;
+}
+
+
+.container{
+    width: getContainerWitdh(md);
+    margin-inline: auto;
+}
+
+
+@include query(md){
+    .container{
+        width: getContainerWitdh(sm);
+    }
+}
+
+@include query(sm){
+    .container{
+        width: getContainerWitdh(xs);
+    }
+}
+
+@include query(xs){
+    .container{
+        width: getContainerWitdh(xxs);
+    }
+}
+
+
+@include query(xxs){
+    .container{
+        width: 90%;
+    }
+}
+

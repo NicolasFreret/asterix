@@ -1,0 +1,31 @@
+@use './mixins' as mq;
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 2rem;
+}
+
+@include mq.col-gen();
+
+@include mq.query(md){
+    @include mq.col-gen('-md-');
+}
+
+@include mq.query(sm){
+    @include mq.col-gen('-sm-');
+}
+
+@include mq.query(xs){
+    @include mq.col-gen('-xs-');
+}
+
+@include mq.query(xxs){
+   [class*='col-']:not(.freeze){
+        grid-column: span 12!important;
+    }
+
+    .row{
+        gap:0 2rem;
+    }
+}

@@ -1,0 +1,41 @@
+@font-face{
+    font-family:ProximaNova;
+    src:url(../fonts/ProximaNova-Regular.woff2) format("woff2");
+    font-weight:400;
+    font-style:normal;
+    font-display: swap
+}
+
+@font-face{
+    font-family:ProximaNovaMedium;
+    src:url(../fonts/ProximaNova-Medium.woff2) format("woff2");
+    font-weight:600;
+    font-style:normal;
+    font-display: swap
+}
+
+@font-face{
+    font-family:ProximaNovaBold;
+    src:url(../fonts/ProximaNova-Bold.woff2) format("woff2");
+    font-weight:900;
+    font-style:normal;
+    font-display: swap
+}
+
+@font-face{
+    font-family:UderzoTitre;
+    src:url(../fonts/UderzoTitre-Regular.woff2) format("woff2");
+    font-style:normal;
+    font-display: swap
+}
+
+%fontUderzo{
+    font-family:UderzoTitre, sans-serif;
+}
+
+.h1{
+    @extend %fontUderzo;
+    font-size: 6.5rem;
+    font-weight: 400;
+    line-height: 5.5rem;
+}
