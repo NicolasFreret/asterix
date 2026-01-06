@@ -1,0 +1,29 @@
+@use './mixins' as *;
+
+.hero-1{
+    color: var(--white);
+    background-color: var(--blue);
+
+    .content{
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    p{
+        font-size: 1.9rem;
+        line-height: 2.2rem;
+        font-weight: 400;
+    }
+
+
+}
+
+
+
+@include query(sm){
+    .hero-1{
+        text-align: center;
+    }
+}
