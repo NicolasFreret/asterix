@@ -2,7 +2,12 @@
 @use './components/mixins' as *;
 @use './components/fonts';
 @use './components/hero-1';
+@use './components/card-1';
 @use './components/header';
+@use './components/icons';
+@use './components/footer';
+
+
 @use './pages/bd';
 
 
@@ -24,6 +29,8 @@
     --red:#D90E23;
     --blue:#2065AA;
     --yellow:#FFD504;
+    --grey:#32404D;
+    --gray:#F5F5F5;
 
 }
 
@@ -52,6 +59,26 @@ video{
 section{
     padding: 3%;
     position: relative;
+}
+
+.btn{
+   background-color: var(--red);
+   padding: 1rem 2rem;
+   border-radius: 30px; 
+   border: none;
+   color:var(--white);
+   font-size: 1.2rem;
+   line-height: 2.7rem;
+   font-weight: 700;
+}
+
+.wallpaper{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -3;
 }
 
 

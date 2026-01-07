@@ -1,7 +1,72 @@
 
-<%- include('./src/assets/parts/Header.html', {title:"Les bandes déssinées"})%>
-   <%- include('./src/assets/parts/Hero-1.html', {title:"Les bandes déssinées", content:"Depuis leur première histoire, Astérix, Obélix et les Irréductibles ont vécu de nombreuses aventures, que ce soit au village ou aux quatre coins du monde. Ils ont rencontré de nombreux amis, relevé des défis mémorables… et bien sûr, affronté des adversaires fous (surtout ces Romains !).", img:"Asterix-Bandes-dessinees.png"})%>
-   </main>
-    <script type="module" src="/src/main.js"></script>
-  </body>
-</html>
+<%- include('./src/assets/parts/Header.html', {title:"Les bandes dessinées"})%>
+
+   <%- include('./src/assets/parts/Hero-1.html', {
+    title:"Les bandes dessinées", 
+    content:" <p>Depuis leur première histoire, Astérix, Obélix et les Irréductibles ont vécu de nombreuses aventures, que ce soit au village ou aux quatre coins du monde. Ils ont rencontré de nombreux amis, relevé des défis mémorables… et bien sûr, affronté des adversaires fous (surtout ces Romains !).</p><p>Retrouvez ici l’intégralité de la collection des albums classiques.</p>", 
+    img:"Asterix-Bandes-dessinees.png"})%>
+     <section class="livres">
+       <div class="container narrow-md">
+         <div class="row">
+          <div class="col-3 col-sm-6">
+            <%- include('./src/assets/parts/Card-1.html',{
+              title: "Astérix le gaulois",
+              date:"1961",
+              img:"album-asterix-le-gaulois.png"
+            })%>
+          </div>
+          <div class="col-3 col-sm-6">
+            <%- include('./src/assets/parts/Card-1.html',{
+              title: "La Serpe d'or",
+              date:"1962",
+              img:"album-La-Serpe-dor.png"
+            })%>
+          </div>
+          <div class="col-3 col-sm-6">
+            <%- include('./src/assets/parts/Card-1.html',{
+              title: "Astérix et les Goths",
+              date:"1963",
+              img:"album-Asterix-et-les-Goths.png"
+            })%>
+          </div>
+          <div class="col-3 col-sm-6">
+            <%- include('./src/assets/parts/Card-1.html',{
+              title: "Astérix Gladiateur",
+              date:"1964",
+              img:"Asterix-Gladiateur.png"
+            })%>
+          </div>
+          <div class="col-3 col-sm-6">
+            <%- include('./src/assets/parts/Card-1.html',{
+              title: "Le Tour de Gaule d’Astérix",
+              date:"1965",
+              img:"Le-Tour-de-Gaule-dAsterix.png"
+            })%>
+          </div>
+          <div class="col-3 col-sm-6">
+            <%- include('./src/assets/parts/Card-1.html',{
+              title: "Astérix et les Goths",
+              date:"1963",
+              img:"album-Asterix-et-les-Goths.png"
+            })%>
+          </div>
+          <div class="col-3 col-sm-6">
+            <%- include('./src/assets/parts/Card-1.html',{
+              title: "Astérix et les Goths",
+              date:"1963",
+              img:"album-Asterix-et-les-Goths.png"
+            })%>
+          </div>
+          <div class="col-3 col-sm-6">
+            <%- include('./src/assets/parts/Card-1.html',{
+              title: "Astérix et les Goths",
+              date:"1963",
+              img:"album-Asterix-et-les-Goths.png"
+            })%>
+          </div>
+         </div>
+       </div>
+     </section>
+     <%- include('./src/assets/parts/Footer.html')%>
+
+   
