@@ -1,13 +1,14 @@
 @use './fonts';
+@use './mixins' as *;
 
 .newsletter{
-
+    position: relative;
     &::before{
         content: '';
         width: 100%;
         position: absolute;
         height: 100px;
-        bottom:100%;
+        bottom:99%;
         z-index: -1;
         background-color: var(--gray);
         left:0;
@@ -15,7 +16,7 @@
     }
 
     background-color: var(--gray);
-    min-height:50vh;
+    min-height:70vh;
     padding-bottom: 200px;
     display: grid;
     place-content: center;
@@ -85,11 +86,85 @@ footer{
     
 
     .sitemap{
+        color: var(--white);
+        padding-block: 5rem;
+        position: relative;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
+        &::before{
+            content: '';
+            background-color: var(--grey);
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100;
+            z-index: -2;
+        }
+
+        .wallpaper{
+            object-fit: cover;
+            object-position: 100%;
+            z-index: -1;
+            inset: inherit;
+            bottom: 0;
+        }
+
+        h2{
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.3rem;
+            line-height: 2rem;
+            font-weight: 900;
+        }
+
+        .h4{
+            font-size: 1.3rem;
+            line-height: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        a{
+          color: var(--white);
+          display: block;
+          font-size: 1.2rem;
+          line-height: 2.2rem;
+          font-weight: 400;  
+        }
     }
 
     .legal_contact{
-
+        background-color: var(--yellow);
+        color: var(--grey);
+        font-size: 1.1rem;
+        line-height: normal;
+        font-weight: 700;
+        padding-block: 2rem;
+        a{
+          color: var(--grey);
+          font-size: 1.1rem;
+          line-height: 2.2rem;
+          font-weight: 700;  
+        }
     }
 
+}
+
+
+
+
+
+
+
+
+
+@include query(xs){
+    footer{
+        h2.h4{
+            text-align: left;
+        }
+    }
 }

@@ -113,7 +113,7 @@ header{
 
 
 
-@include query(sm){
+@include query(xs){
 
     header{
 
@@ -147,16 +147,23 @@ header{
             
         }
 
-
-
         a:not(.hbg){
             text-align: left;
             padding-inline: 0;
             padding-block: 1rem;
         }
 
-        .mobile_langs_search{
+        .logo_search{
+            padding: 3rem;
+            flex-flow: column;
 
+            .logo{
+                margin-inline: auto;
+            }
+        }
+
+        .mobile_langs_search{
+            order: -1;
             .hbg{
                 display: block;
             }
