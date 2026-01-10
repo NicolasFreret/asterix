@@ -1,25 +1,49 @@
 @use './fonts';
 @use './mixins' as *;
 
+%borderBottom{
+    border-bottom: var(--white) 1px solid;
+}
+
+%borderRight{
+    border-right: var(--white) 1px solid;
+}
+
 header{
 
-    a:not(.hbg){
-        @extend %fontUderzo;
+    a{
         color:var(--white);
-        font-size: 1.4rem;
-        line-height: normal;
-        font-weight: 400;
-        display: inline-block;
-        min-width: fit-content;
-        padding-inline: 2%;
-        text-align: center;
-        text-transform: uppercase;
         will-change: color;
         transition: color .5s ease;
-
         &:hover{
-            color: var(--yellow);
+          color: var(--yellow);
         }
+    }
+
+    li{
+        position: relative;
+
+        &:hover .sub-menu{
+            display: flex;
+        }
+       
+    }
+
+    li:not(.hbg){
+        padding-inline: 2%;
+        min-width: fit-content;
+
+        & > a{
+            @extend %fontUderzo;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            line-height: normal;
+            font-weight: 400;
+            display: inline-block;
+            text-align: center;
+        }
+
+        
     }
 
     .logo img{
@@ -67,9 +91,16 @@ header{
         background-color: var(--red);
         padding-block: 1rem;
 
+        & > a{
+            color:var(--white);
+            &:hover{
+                color: var(--yellow);
+            }
+        }
+
         .container{
-            & a:not(:last-child){
-                border-right: var(--white) 1px solid;
+            & li:not(:last-child){
+                @extend %borderRight;
             }
 
             display: flex;
@@ -78,6 +109,30 @@ header{
   
         }
         
+    }
+
+
+    .sub-menu{
+        position: absolute;
+        z-index: 5;
+        width: 300px;
+        background-color: var(--red);
+        left: 0;
+        top:100%;
+        display: none;
+        flex-flow: column;
+        padding: 5px 25px;
+
+        :not(:last-child){
+             @extend %borderBottom;
+        }
+
+        a{
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.6rem;
+            padding-block: 10px;
+        }
     }
 
 }
@@ -190,7 +245,7 @@ header{
                 align-items: stretch;
                 padding-block: 1rem;
 
-                & a:not(:last-child){
+                & li:not(:last-child){
                     border-right: none;
                     border-bottom: var(--white) 1px solid;
                     

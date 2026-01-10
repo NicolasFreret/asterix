@@ -149,6 +149,19 @@ footer{
           line-height: 2.2rem;
           font-weight: 700;  
         }
+
+        .btn{
+            font-size: 1.5rem;
+            line-height: 3.5rem;
+            font-weight: 700;
+            background-color: var(--white);
+            color: var(--grey);
+            text-transform: uppercase;
+        }
+
+        .contact{
+            text-align: right;
+        }
     }
 
 }
