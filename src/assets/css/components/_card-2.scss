@@ -1,0 +1,21 @@
+@use './fonts';
+@use './card-1';
+
+.card-2{
+   @extend .card-1;
+   background-color: var(--white);
+   figure{
+        height: 200px;
+        align-content: center;
+        img{
+            height: 120px;
+            width: 120px;
+            border-radius: 100%;
+        } 
+   }
+
+   .content{
+            height: 50px;
+    }
+
+}

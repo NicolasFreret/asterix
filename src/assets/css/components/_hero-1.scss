@@ -12,6 +12,7 @@
         justify-content: center;
     }
 
+
     p{
         font-size: 1.9rem;
         line-height: 2.2rem;
@@ -36,5 +37,6 @@
 @include query(sm){
     .hero-1{
         text-align: center;
+
     }
 }

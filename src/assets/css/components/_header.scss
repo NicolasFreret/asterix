@@ -23,7 +23,8 @@ header{
     li{
         position: relative;
 
-        &:hover .sub-menu{
+        &:hover .sub-menu,
+        &:focus-within .sub-menu{
             display: flex;
         }
        
@@ -233,6 +234,16 @@ header{
             will-change: max-height;
             transition: max-height var(--transition-time) ease;
             z-index: 10;
+
+            .sub-menu {
+                position: static;
+                display: flex;
+                width: 100%;
+                padding: 0;
+                padding-left: 10px;
+                max-height: 0;
+                overflow: hidden;
+            }
             
 
             br{

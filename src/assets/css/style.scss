@@ -3,12 +3,15 @@
 @use './components/fonts';
 @use './components/hero-1';
 @use './components/card-1';
+@use './components/card-2';
 @use './components/header';
 @use './components/icons';
 @use './components/footer';
 
 
 @use './pages/bd';
+@use './pages/gaulois';
+
 
 
 
@@ -44,6 +47,7 @@ body{
     font-size: 1.6rem;
     line-height: 2.6rem;
     font-weight: 400;
+    --mobile:0;
 }
 
 a{
@@ -113,9 +117,13 @@ section{
 }
 
 @include query(xs){
+    body{
+        --mobile:1;
+    }
     .container{
         width: getContainerWitdh(xxs);
     }
+
 }
 
 
