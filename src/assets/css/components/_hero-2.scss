@@ -1,0 +1,112 @@
+@use './mixins' as *;
+
+
+.hero-2{
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        background-color: var(--green);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+        z-index: -1;
+    }
+    
+    h1{
+        color: var(--white);
+    }
+
+    .container{
+        position: relative;
+        top:50px;
+    }
+
+
+    .nationality{
+        width: 500px;
+        background-color: var(--yellow);
+        padding: 5rem;
+        clip-path: polygon(0 0, 100% 5%, 97% 91%, 5% 100%);
+
+        .langs{
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+        }
+        
+    }
+
+    .illustration{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        figure{
+            height: 200px;
+            width: 200px;
+            border-radius: 100%;
+            overflow: hidden;
+            border: var(--white) solid 10px;
+        }
+    }
+    
+
+}
+
+@include query(sm){
+
+    .hero-2{
+
+        .nationality{
+            width: 400px;
+           
+            
+        }
+
+
+    }
+
+}
+
+
+
+@include query(xs){
+
+    .hero-2{
+
+        &::before{
+            height: 350px;
+
+        }
+
+        .row{
+            display: flex;
+            flex-flow: column;
+        }
+
+        .content,
+        .col-7{
+            display: contents;
+        }
+
+        .h2{
+            text-align: center;
+            order: -1;
+        }
+
+        figure{
+            margin: 0 auto;
+        }
+
+        .nationality{
+            width: min(500px, 100%);
+            margin: 0 auto;
+            text-align: center;
+            
+        }
+
+    }
+
+
+
+}

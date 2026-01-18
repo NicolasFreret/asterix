@@ -2,6 +2,7 @@
 @use './components/mixins' as *;
 @use './components/fonts';
 @use './components/hero-1';
+@use './components/hero-2';
 @use './components/card-1';
 @use './components/card-2';
 @use './components/header';
@@ -11,6 +12,8 @@
 
 @use './pages/bd';
 @use './pages/gaulois';
+@use './pages/detail-personnage';
+
 
 
 
@@ -26,6 +29,7 @@
     --base-px:10px;
     --transition-time: .5s;
     --content-margin:2rem;
+    --w-img-hero-1:100%;
 
     --white:#fff;
     --black:#000;
@@ -34,6 +38,8 @@
     --yellow:#FFD504;
     --grey:#32404D;
     --gray:#F5F5F5;
+    --green:#45AC34;
+    --yellow:#FFD504;
 
 }
 

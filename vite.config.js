@@ -12,8 +12,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: resolve(__dirname, 'index.html'),
-        gaulois: resolve(__dirname, 'gaulois.html')
-
+        gaulois: resolve(__dirname, 'gaulois.html'),
+        romains: resolve(__dirname, 'romains.html'),
+        detailPersonnage: resolve(__dirname, 'detail-personnage.html')
 
       },
       output: {
